@@ -1,24 +1,22 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 const Header = () => {
 
-    const navigator = useNavigate();
-
-    function home() {
-        navigator('/')
-    }
     return (
-        <nav className="navbar" style={{ backgroundColor: '#e3f2fd' }}>
+        <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#e3f2fd' }}>
             <div className="container-fluid">
-                <a className="navbar-brand" onClick={home}>EMS</a>
+                <Link className="navbar-brand" to='/'>EMS</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page">Home</a>
+                            <NavLink className="nav-link" to='/employees'>Employees</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to='/departments'>Departments</NavLink>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">

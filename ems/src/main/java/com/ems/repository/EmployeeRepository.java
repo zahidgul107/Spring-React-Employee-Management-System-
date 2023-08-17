@@ -7,3 +7,4 @@ import com.ems.model.Employee;
 public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 
 }
+ 
